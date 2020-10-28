@@ -21,13 +21,32 @@ export default function ProductSection() {
     <div className={classes.section}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Let{"'"}s talk product</h2>
+          <h2 className={classes.title}>Mission</h2>
+          <h5 className={classes.description} justify="left">
+            <b>
+              The Community Networks Learning Grant by the Association for 
+              Progressive Communications (APC) aims to contribute 
+              an enabling ecosystem for the emergence and growth of community networks 
+              and other community-based connectivity initiatives in developing countries.
+            </b>
+            <p>For more click here.</p>
+          </h5>
           <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
+            <b>
+              Gram Marg, IIT Bombay and BAIF Development Research Foundation, 
+              Pune have been the recipients of the APC Community Networks Learning Grant.
+              Gram Marg{"'"}s mission is to enable rural India digitally
+              through technology development, field implementation and deployment
+              of the technology solutions and creating sustainable business models
+              for connectivity.
+            </b>
+            <p>For more click here.</p>
+          </h5>
+          <h5 className={classes.description}>
+            <b>
+              BAIF’s Mission is to create opportunities for gainful self-employment for the rural families, ensuring sustainable livelihood and improved quality of life.
+            </b>
+            <p>For more click here.</p>
           </h5>
         </GridItem>
       </GridContainer>
