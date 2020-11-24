@@ -14,8 +14,6 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
-import SectionCarousel from "./Sections/SectionCarousel.js";
-import SectionTabs from "./Sections/SectionTabs.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
@@ -23,6 +21,10 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
+import SectionCarousel from "./Sections/SectionCarousel.js";
+import SectionTabs from "./Sections/SectionTabs.js";
+import SectionMaps from "./Sections/SectionMaps.js";
+import SectionPills from "./Sections/SectionPills.js";
 
 const dashboardRoutes = [];
 
@@ -37,7 +39,7 @@ export default function IntroPage(props) {
         color="transparent"
         routes={dashboardRoutes}
         brand="APC"
-        // rightLinks={<HeaderLinks />}
+        rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -49,7 +51,7 @@ export default function IntroPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>APC</h1>
+              <h1 className={classes.title}>Association for Progressive Communications</h1>
               <h4>
                 Description here
               </h4>
@@ -70,13 +72,14 @@ export default function IntroPage(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
           <SectionCarousel />
-          <SectionTabs />
+          {/* <SectionTabs /> */}
+          <hr color="purple" size="1" width="500" align="center"></hr>
+          <SectionPills />
+          {/* <SectionMaps /> */}
           {/* <ProductSection />
           <TeamSection />
           <WorkSection /> */}
-        </div>
       </div>
       <Footer />
     </div>

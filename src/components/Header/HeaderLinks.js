@@ -12,7 +12,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Apps, CloudDownload, Home, BlurOnSharp, Book, Phone, ControlCamera, People, PermMedia } from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -27,6 +27,136 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        <Button
+          href="/apc-page"
+          color="transparent"
+          // target="_blank"
+          className={classes.navLink}
+        >
+          <Home className={classes.icons} /> Home
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          buttonText="About"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={BlurOnSharp}
+          dropdownList={[
+            <Link to="/projects-page" className={classes.dropdownLink}>
+              Projects
+            </Link>,
+            // <Link to="" className={classes.dropdownLink}>
+            //   Organizations Involved
+            // </Link>
+            <Tooltip
+              id="instagram-twitter"
+              title="APC"
+              // placement={window.innerWidth > 959 ? "top" : "left"}
+              placement="right"
+              classes={{ tooltip: classes.tooltip }}
+            >
+              <Button
+                href="https://twitter.com/CreativeTim?ref=creativetim"
+                target="_blank"
+                color="transparent"
+                className={classes.navLink}
+              >
+                {/* <i className={classes.socialIcons + " fab fa-twitter"} /> */}
+                Organizations Involved
+              </Button>
+            </Tooltip>
+            // <CustomDropdown
+            //   noLiPadding
+            //   buttonText="Organizations Involved"
+            //   buttonProps={{
+            //     className: classes.navLink,
+            //     color: "transparent"
+            //   }}
+            //   // buttonIcon={BlurOnSharp}
+            //   dropdownList={[
+            //     <Link to="/projects-page" className={classes.dropdownLink}>
+            //       Projects
+            //     </Link>,
+            //     <Link to="" className={classes.dropdownLink}>
+            //       Organizations Involved
+            //     </Link>
+            //   ]}
+            // />
+          ]}
+        />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/apc-page#section1"
+          color="transparent"
+          // target=""
+          className={classes.navLink}
+        >
+          <ControlCamera className={classes.icons} /> Mission
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+      <CustomDropdown
+          noLiPadding
+          buttonText="People"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent"
+          }}
+          buttonIcon={People}
+          dropdownList={[
+            <Link to="/profile-page" className={classes.dropdownLink}>
+              Dr. Sarbani Banerjee Belur
+            </Link>,
+            <Link to="/profile-page2" className={classes.dropdownLink}>
+              Ramprasad V
+            </Link>
+          ]}
+        />
+        {/* <Button
+          href=""
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <People className={classes.icons} /> People
+        </Button> */}
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/publications-page"
+          color="transparent"
+          // target="_blank"
+          className={classes.navLink}
+        >
+          <Book className={classes.icons} /> Publications
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href=""
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <PermMedia className={classes.icons} /> Media
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href=""
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <Phone className={classes.icons} /> Contact
+        </Button>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText="Components"
@@ -60,11 +190,11 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
+        // <Tooltip title="Delete">
+        //   <IconButton aria-label="Delete">
+        //     <DeleteIcon />
+        //   </IconButton>
+        // </Tooltip>
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
@@ -114,7 +244,7 @@ export default function HeaderLinks(props) {
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }

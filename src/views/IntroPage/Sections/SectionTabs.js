@@ -6,6 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Face from "@material-ui/icons/Face";
 import Chat from "@material-ui/icons/Chat";
 import Build from "@material-ui/icons/Build";
+import PlaceIcon from '@material-ui/icons/Place';
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -21,7 +23,7 @@ export default function SectionTabs() {
     <div className={classes.section}>
       <div className={classes.container}>
         <div id="nav-tabs">
-          {/* <h3>Navigation Tabs</h3> */}
+          <h3>Our presence</h3>
           <GridContainer>
             {/* <GridItem xs={12} sm={12} md={6}> */}
             <GridItem xs={12} sm={12}>
@@ -32,24 +34,27 @@ export default function SectionTabs() {
                 headerColor="primary"
                 tabs={[
                   {
-                    tabName: "Profile",
-                    tabIcon: Face,
+                    tabName: "India",
+                    tabIcon: PlaceIcon,
                     tabContent: (
-                      <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
-                      </p>
+                      <div>
+                        <p className={classes.textCenter}>
+                          The Community Networks Learning Grant by the 
+                          Association for Progressive Communications (APC)
+                          aims to contribute an enabling ecosystem for 
+                          the emergence and growth of community networks 
+                          and other community-based connectivity initiatives 
+                          in developing countries.
+                        </p>
+                        <p className={classes.textCenter}>
+                          {/* <a href="/apc-page">Click here to learn more</a> */}
+                        </p>
+                      </div>
                     )
                   },
                   {
-                    tabName: "Messages",
-                    tabIcon: Chat,
+                    tabName: "Location2",
+                    tabIcon: PlaceIcon,
                     tabContent: (
                       <p className={classes.textCenter}>
                         I think that’s a responsibility that I have, to push
@@ -64,8 +69,8 @@ export default function SectionTabs() {
                     )
                   },
                   {
-                    tabName: "Settings",
-                    tabIcon: Build,
+                    tabName: "Location3",
+                    tabIcon: PlaceIcon,
                     tabContent: (
                       <p className={classes.textCenter}>
                         think that’s a responsibility that I have, to push
